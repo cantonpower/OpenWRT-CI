@@ -18,6 +18,13 @@ on:
         description: '手动调整插件包，多个请用\n符号隔开。'
         required: true
         type: string
+        default: |
+          openclash
+          luci-app-openclash
+          passwall2
+          luci-app-passwall2
+          luci-app-adguardhome
+        
       TEST:
         description: '仅输出配置文件，不编译固件。'
         default: 'false'
