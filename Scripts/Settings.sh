@@ -46,10 +46,26 @@ echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
 #	echo -e "$WRT_PACKAGE" >> ./.config
 #fi
 #手动调整的插件（已修复）
+#if [ -n "$WRT_PACKAGE" ]; then
+#  for pkg in $WRT_PACKAGE; do
+#    echo "CONFIG_PACKAGE_${pkg}=y" >> ./.config
+#  done
+#fi
+# ==================== 手动调整插件包（支持多行输入）====================
+echo "=== 添加手动插件包 ==="
 if [ -n "$WRT_PACKAGE" ]; then
-  for pkg in $WRT_PACKAGE; do
-    echo "CONFIG_PACKAGE_${pkg}=y" >> ./.config
+  # 把多行输入（含换行）统一转成空格分隔的列表
+  PKG_LIST=$(echo "$WRT_PACKAGE" | tr '\n\r\t' ' ' | xargs)
+  
+  for pkg in $PKG_LIST; do
+    if [ -n "$pkg" ]; then
+      echo "CONFIG_PACKAGE_${pkg}=y" >> ./.config
+      echo "  → 已添加: ${pkg}"
+    fi
   done
+  echo "=== 手动插件包添加完成 ==="
+else
+  echo "没有手动指定额外插件包"
 fi
 
 #高通平台调整
