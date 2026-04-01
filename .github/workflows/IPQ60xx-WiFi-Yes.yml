@@ -47,7 +47,6 @@ on:
         runc
         easytier
         quickstart
-
         
       TEST:
         description: '仅输出配置文件，不编译固件。'
