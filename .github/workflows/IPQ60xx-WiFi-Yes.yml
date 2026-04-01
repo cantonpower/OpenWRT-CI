@@ -30,6 +30,7 @@ on:
           luci-app-mosdns
           luci-app-wolplus
           luci-app-quickstart
+          luci-app-quickfile
           luci-app-easytier
           luci-app-samba4        
           luci-app-appfilter
@@ -37,8 +38,11 @@ on:
           luci-app-pbr
           luci-app-partexp
           luci-app-ttyd
-          luci-app-upnp        
-          luci-app-package-manager 
+          luci-app-upnp
+          luci-app-firewall
+          luci-app-sqm
+          luci-app-package-manager
+          luci-app-autoreboot
           htop
           coreutils
           coreutils-nohup
