@@ -18,9 +18,7 @@ on:
         description: '手动调整插件包，多个请用\n符号隔开。'
         required: true
         type: string
-        default: 'luci-app-homeproxy luci-app-openclash luci-app-passwall2 luci-app-adguardhome luci-app-ddns-go luci-app-diskman luci-app-mosdns luci-app-wolplus luci-app-appfilter luci-app-oaf luci-app-ttyd
-
-'
+        default: 'luci-app-homeproxy luci-app-openclash luci-app-passwall2 luci-app-adguardhome luci-app-ddns-go luci-app-diskman luci-app-mosdns luci-app-wolplus luci-app-appfilter luci-app-oaf luci-app-ttyd'
         
       TEST:
         description: '仅输出配置文件，不编译固件。'
